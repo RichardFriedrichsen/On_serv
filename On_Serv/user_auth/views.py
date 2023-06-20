@@ -18,7 +18,7 @@ def register_user(request):
             password = form.cleaned_data['password1']
             user = authenticate(username = username, password = password)
             login(request, user)
-            return HttpResponseRedirect(reverse('polls:index'))
+            return HttpResponseRedirect(reverse('main:index'))
     else:
         form = RegisterUserForm()
     return render(request, "authentication/register.html",{"form":form,})
@@ -47,7 +47,7 @@ def authenticate_user(request):
     else:
         login(request, user)
         return HttpResponseRedirect(
-            reverse('polls:index')
+            reverse('main:index')
 )
 
 def show_user(request):
