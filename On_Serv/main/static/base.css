@@ -1,0 +1,98 @@
+body{
+    background-color: #343a40;
+}
+.header-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.header-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.header-middle{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.header-right{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.visual-break{
+    background-color: #1f1f99;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 800px;
+}
+
+.main-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 200px;
+    padding-left: 20px;
+}
+
+.nav-link{
+    display: grid;
+    margin-top: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    padding-left: 20px;
+}
+
+.nav-link:hover {
+    color: blue;
+}
+
+.main-middle{
+    width: 70rem; 
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto ;
+}
+
+.main-right{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 150px;
+}
+
+.about_us{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.card-form{
+    width: 40rem; 
+    margin-top:20px; 
+    margin-bottom: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-right: 80px; 
+    padding-left: 80px; 
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+}
+
+.btn-primary{
+    margin-bottom: 20px;
+}
+
+.addheaders{
+    text-align: center;
+    margin-top: 20px;
+    margin-top: 20px;
+}
+

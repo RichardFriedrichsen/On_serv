@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block content %}     
+          <h3 class="addheaders">Services:</h3>     
+            {% for service in service_list %}
+            <div class="card" style="width: 40rem; margin-top:20px; margin-left: auto; margin-right: auto;">
+                <div class="card-header">
+                  <h4>Serviced Vehicle: {{service.serviced_vehicle}} </h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Company: {{service.company}}</li>
+                  <li class="list-group-item">Service Date: {{service.service_date}}</li>
+                  <li class="list-group-item">Service Type: {{service.service_type}}</li>
+                  <li class="list-group-item">Serviced at: {{service.serviced_at}} km</li>
+                  <li class="list-group-item">Cost:R {{service.cost}}</li>
+                
+                </ul>
+              </div>
+              <br>
+              {% endfor %}
+       
+       
+   
+    
+     
+{% endblock %}

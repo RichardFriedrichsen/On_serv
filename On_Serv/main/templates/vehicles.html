@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+   
+            <h3 class="addheaders">Vehicles:</h3>
+            {% for vehicle in vehicle_list %}
+            <div class="card" style="width: 40rem; margin-top:20px; margin-left: auto; margin-right: auto;">
+                <div class="card-header">
+                  <h4>{{vehicle.vehicle_make}} {{vehicle.v_model}} </h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">VIN No: {{vehicle.registration_no}}</li>
+                  <li class="list-group-item">VIN No: {{vehicle.vin_no}}</li>
+                  <li class="list-group-item">Engine No: {{vehicle.engine_no}}</li>
+                  <li class="list-group-item">Service Interval: {{vehicle.service_intervall}} km</li>
+                  <li class="list-group-item">Last Service: {{vehicle.last_service}} km</li>
+                  <li class="list-group-item">Current Milage: {{vehicle.current_milage}} km</li>
+                </ul>
+              </div>
+              <br>
+              {% endfor %}
+   
+
+    
+    
+{% endblock %}

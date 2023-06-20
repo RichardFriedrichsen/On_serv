@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+
+  <h3 class="addheaders">Companies:</h3>
+            {% for company in company_list %}
+            <div class="card" style="width: 40rem; margin-top:20px; margin-left: auto; margin-right: auto;" >
+                <div class="card-header">
+                  <h4>{{company.name}} </h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Phone: {{company.phone}}</li>
+                  <li class="list-group-item">E-Mail: {{company.email}}</li>
+                  <li class="list-group-item">Address: {{company.address}}</li>
+                  <li class="list-group-item">Postal: {{company.postal}}</li>
+                  <li class="list-group-item">Area: {{company.area}}</li>
+                </ul>
+              </div>
+              <br>
+              {% endfor %}
+    
+ 
+    
+    
+{% endblock %}

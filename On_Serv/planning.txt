@@ -1,0 +1,42 @@
+Pages:
+- About us Page
+    - Vision
+
+    
+- Vehicles (Main Page)
+    Features:
+        List Vehicles
+        Add Vehicles
+
+    Model:
+        -Make
+        -model
+        -Vin
+        -engine no
+        -service intervall
+        -current km's
+        -last service
+
+
+- Service History
+    Features:
+    - List Service History
+    - add service
+    
+    Model:
+    -Service Date
+    -Company
+    -Serviced at (km)
+    -type of service (Major Minor)
+    -Cost
+
+- My Companies
+    Features
+        list companies
+        add company
+
+    model:
+    Company Name
+    phone number
+    address
+

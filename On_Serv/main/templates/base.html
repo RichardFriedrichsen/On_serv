@@ -1,0 +1,54 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>About</title>
+</head>
+<body style="background-color: #343a40;">
+    
+        <div class="header-container">
+        <aside class="header-left"></aside>
+        <main class="header-middle">
+        <img src="{% static 'logo2.jpg' %}" alt="">
+        </main>
+        <aside class="header-right"></aside>
+    </div>
+
+    <div class="visual-break"></div>
+    
+    <div class="main-container">
+        <aside class="main-left "> 
+           
+            <br>
+            <a class="nav-link" href="{% url 'main:index' %}">About Us</a>
+            <br>
+            <a class="nav-link" href="{% url 'main:list_vehicles' %}">Vehicles</a>
+            <br>
+            <a class="nav-link" href="{% url 'main:add_vehicle' %}">- add Vehicle</a>
+            <br>
+            <a class="nav-link" href="{% url 'main:list_services' %}">Service History</a>
+            <br>
+            <a class="nav-link" href="{% url 'main:add_service' %}">- add Service</a>
+            <br>
+            <a class="nav-link" href="{% url 'main:list_companies' %}">My Companies</a>
+            <br>
+            <a class="nav-link" href="{% url 'main:add_company' %}">- add Company</a>
+       
+        </aside>
+
+        <main class="main-middle">
+            {% block content %}
+
+            {% endblock %}
+        </main>
+
+        <aside class="main-right"></aside>
+    </div>
+
+   
+</body>
+</html>
