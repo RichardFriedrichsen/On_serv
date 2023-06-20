@@ -21,7 +21,7 @@ from django.shortcuts import redirect
 urlpatterns = [
     path('main/', include('main.urls')),
     path('admin/', admin.site.urls),
-     path("", lambda request: redirect('main/'), name='root'),
-    # path("user_auth/", include("django.contrib.auth.urls")),
-    # path("user_auth/", include("user_auth.urls")),
+    path("user_auth/", include("django.contrib.auth.urls")),
+    path("user_auth/", include("user_auth.urls")),
+     path("", lambda request: redirect('user_auth/'), name='root'),
 ]
