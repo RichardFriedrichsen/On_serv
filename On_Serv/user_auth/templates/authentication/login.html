@@ -1,35 +1,44 @@
+
+
 {% extends 'base.html'%}
 
 {% block content %}
-
+<br>
     <div class="row">
-      <aside class="col-5"></aside>
-      <main class="col-2 card">
-        <div class="row">
-          <div class="col-12 card-title"><h2>Login</h2></div>
+      <aside class="col-4"></aside>
+      <main class="col-4 card">
+        <div class="row login-div">
+          <div class="col-12 card-title " style="text-align: center;"><h2>Login</h2></div>
         </div>
 
-        
+        <div class="container-fluid">
         <form action="{% url 'user_auth:authenticate_user' %}" method="post">
           {% csrf_token %}
-          <label>Username:</label>
-          <input type="text" name="username" placeholder="User" required />
-
-          <label>Password:</label>
-          <div class="row">
-            <div class="col-12">
+          <div class="form-group">
+            <label>Username:</label>
+            <br>
+            <input type="text" name="username" placeholder="User" required />
+          </div>
+         
+         
+            <div class="form-group">
+              <label>Password:</label>
+              <br>
               <input type="password" name="password" required />
             </div>
-          </div>
+
           <div class="row">
             <div class="col-12 align-right top-margin">
-              <input type="submit" value="Login" />
+              <br>
+              <input class="btn btn-primary" style="float: right;" type="submit" value="Login" />
             </div>
-            <div class="col-12 register"><a href="{% url 'user_auth:register_user'%}">Register here</a></div>
+            <br>
+            <div style="float: right; text-align: right; font-size: 0.85rem; margin-bottom: 10px;" class="col-12 register"><a href="{% url 'user_auth:register_user'%}">Register here</a></div>
           </div>
         </form>
+      </div>
       </main>
-      <aside class="col-5"></aside>
+      <aside class="col-4"></aside>
     </div>
 
     {% endblock %}
