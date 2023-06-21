@@ -4,9 +4,11 @@
     
     <div class="row">
       <aside class="col-4"></aside>
-      <main class="col-4 card">
+    
+      <main class="col-4 card" style="margin-top: 40px; padding-left: 50px; padding-right: 50px;">
         <div class="row">
-          <div class="col-12 card-title"><h2>Create Account</h2></div>
+       
+          <div class="col-12 card-title" style="text-align: center; margin-top: 20px;"><h2>Create Account</h2></div>
         </div>
 
         {% if form.errors %}
@@ -16,8 +18,15 @@
         
         <form action="{% url 'user_auth:register_user' %}" method="post">
           {% csrf_token %}
-            {{form.as_p}}
-              <input type="submit" value="Register" />
+          {% for field in form %}
+          <div class="form-field">
+              {{ field.label_tag }}
+              <br>
+              {{ field }}
+              {{ field.errors }}
+          </div>
+          {% endfor %}
+              <input style="float: right; margin-top: 20px;" class="btn btn-primary" type="submit" value="Register" />
           
         </form>
       </main>
