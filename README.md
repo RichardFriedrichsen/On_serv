@@ -1,4 +1,4 @@
-Prject Name: On_serv
+Project Name: On_serv
 
 On_serv is an Online Vehicle Service/Repair tracking. You can add Repair Companies, Vehicles and Services to keep track on when they were done.
 
