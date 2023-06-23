@@ -6,9 +6,17 @@ On_serv is an Online Vehicle Service/Repair tracking. You can add Repair Compani
 
 ○ A table of Contents to allow other people to quickly navigate
 especially long or detailed READMEs.
-○ An installation section which tells other users how to install your
-project locally.
-○ A usage section that instructs others on how to use your project after
-they’ve installed it. Include screenshots of your project in action.
+
+Installation:
+- Python
+- PIP
+- PIP install Django
+- CD into On_serv directory
+  Run:
+  py manage.py runserver
+  Default IP: http://127.0.0.1:8000/
+
+![image](https://github.com/RichardFriedrichsen/On_serv/assets/33938474/c6f99091-4baa-4ee8-8914-490ee863be43)
+
 ○ A section for credits which highlights and links to the authors of your
 project if the project has been created by more than one person.
